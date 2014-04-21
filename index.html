@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Saranyu Player</title>
+		<script type="text/javascript" src="js/saranyuPlayer.js"></script>
+		<script type="text/javascript" src="js/utils/saranyuPlayer.utils.js"></script>
+		<script type="text/javascript" src="js/embed/saranyuPlayer.embed.js"></script>
+		<script type="text/javascript" src="js/api/saranyuPlayer.api.js"></script>
+		<script type="text/javascript">
+			if (window.addEventListener)
+				window.addEventListener("load", init, false);
+			else if (window.attachEvent)
+				window.attachEvent("onload", init);
+			else window.onload = init;
+			
+			function init(){
+				saranyuPlayer("player",{
+					width:640,
+					height:390,
+					advertisement:{},
+					playlist:{
+						"type":"vod",
+						"items":[
+							{
+								"title":"Iron Man 3 Trailer",
+								"imageUrl":"http://exurbe.com/wp-content/uploads/2013/05/iron-man-3.jpg",
+								"videoUrl":"http://54.251.202.214/player9Apr/videos/iron.mp4"
+							},
+							{
+								"title":"Prince of Persia Trailer",
+								"imageUrl":"http://stylefavor.com/wp-content/uploads/2012/10/Jake_Gyllenhaal_in_Prince_of_Persia-_The_Sands_of_Time_Wallpaper.jpg",
+								"videoUrl":"http://54.251.202.214/player9Apr/videos/prince.mp4"	
+							}
+						]
+					},
+					skin:{
+						"controlbar": {
+				  	      	"leftSideItems" : ['play','volume'],
+							"playtime" :true,
+						    "rightSideItems": ['quality','fullscreen'],
+						    "visible":true,
+						    "autohidetime" : 5000
+						},
+						"skinfile" : "assets/skin.xml"
+					}
+				});
+			}			
+		</script>
+	</head>
+	<body>
+		<center>
+			<div id="player">Loading Player</div>
+		</center>
+	</body>
+</html>

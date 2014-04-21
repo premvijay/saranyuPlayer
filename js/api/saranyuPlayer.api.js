@@ -1,0 +1,44 @@
+
+(function(saranyuPlayer, undefined) {
+
+	var utils = saranyuPlayer.utils;
+	var WIDTH = 640;
+	var HEIGHT = 390;
+	var PLAYLIST = {};
+
+	var api = saranyuPlayer.api = function(container){};
+
+	function config(setup){
+		WIDTH = setup.width;
+		HEIGHT = setup.height;
+		PLAYLIST = setup.playlist;
+	}
+
+	api.selectPlayer = function(identifier, setup) {
+		config(setup);
+		var _container;
+	    if(typeof identifier == 'string'){
+		    _container = document.getElementById(identifier);
+	    }
+	    
+	    if(_container){
+	    	utils.log("The DOM element exists");
+	    	if(utils.flashVersion()){
+	    		utils.log("Loading Flash Player");
+	    		if(saranyuPlayer.embed){
+	    			_container = saranyuPlayer.embed.embedFlash(_container, WIDTH, HEIGHT, PLAYLIST);
+	    		}
+	    	}
+	    	else{	    		
+	    		utils.log("Loading HTML5 Player");
+				_container = saranyuPlayer.embed.embedHTML5(_container, WIDTH, HEIGHT, PLAYLIST);
+	    	}
+	    }
+	    else{
+	    	utils.log("The DOM element does not exists");
+	    	alert("There is no such DOM element with id as "+identifier);
+	    }
+	    return null;
+	};
+
+})(window.saranyuPlayer);

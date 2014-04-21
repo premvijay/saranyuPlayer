@@ -1,0 +1,134 @@
+<!--
+/*************************************************************************
+ *
+ *  Saranyu Technologies Pvt. Ltd. Confidential
+ *
+ *  Copyright (C)  2013 - 14, Saranyu Technologies Pvt. Ltd.
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Saranyu Technologies Pvt. Ltd. and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Saranyu Technologies Pvt. Ltd
+ * and its suppliers and may be covered by patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly prohibited unless prior written permission is obtained
+ * from Saranyu Technologies Pvt. Ltd.
+ **************************************************************************/ -->
+
+
+<skin>
+   <Icons> 
+        <icon name="bigPlayButton"                src="icons/bigPlay.png"/>
+        <icon name="bigPlayButtonHover"           src="icons/bigPlayHover.png"/>
+
+        <icon name="bufferButton"            src="assets/BufferIcon.gif"/>
+         
+        <icon name="playButton"              src="icons/zee_player/play.png"/>
+        <icon name="pauseButton"             src="icons/zee_player/pause.png"/>
+        <icon name="replayButton"            src="assets/Replay.png"/>
+        <icon name="playListButton"          src="icons/zee_player/menu.png"/>
+        <icon name="volumeButton"            src="icons/zee_player/volume-normal.png"/>
+        <icon name="muteButton"              src="icons/muteicon.png"/>
+        <icon name="qualityButton"           src="icons/zee_player/settings.png"/>
+        <icon name="fullScreenButton"        src="icons/zee_player/fullscreen.png"/> 
+        <icon name="seekBarHandle"           src="icons/SeekBarHandle.png"/>
+        <icon name="volumeBarHandle"         src="icons/VolumeThumb.png"/>
+        <icon name="playListLeftArrow"       src="icons/PlayListLeftArrow.png"/>
+        <icon name="playListRightArrow"      src="icons/PlayListRightArrow.png"/>
+        <icon name="playListLeftArrowOver"   src="icons/PlayListLeftArrowOver.png"/>
+        <icon name="playListRightArrowOver"  src="icons/PlayListRightArrowOver.png"/>
+        <icon name="facebookIcon"            src="icons/facebookIcon.png"/>
+        <icon name="twitterIcon"             src="icons/twitterIcon.png"/>
+          
+        <icon name="videoClipButton"             src="icons/VideoClip.png"/>
+        <icon name="videoMarkButton"             src="icons/VideoMark.png"/>
+        <icon name="shareButton"                 src="icons/Share.png"/>
+        <icon name="notesButton"                 src="icons/AddNotes.png"/>
+        <icon name="embedButton"                 src="icons/Embed.png"/>
+        <icon name="watchLaterButton"            src="icons/WatchLater.png"/>
+
+        <icon name="fullScreenOnIconOver"        src="icons/FullScreen/FS_W2.png"/>
+        <icon name="fullScreenOffIconOver"       src="icons/FullScreen/FS_W3.png"/>
+        <icon name="fullScreenMedIconOver"       src="icons/FullScreen/FS_W1.png"/>
+
+        <icon name="fullScreenMedIcon"           src="icons/FullScreen/FS2.png"/>
+        <icon name="fullScreenOffIcon"           src="icons/FullScreen/FS3.png"/>
+        <icon name="fullScreenOnIcon"            src="icons/FullScreen/FS1.png"/>
+
+        <icon name="nextPlayListItemArrow"       src="icons/PlaylistArrow/RightArrow.png"/>
+        <icon name="prevPlayListItemArrow"       src="icons/PlaylistArrow/LeftArrow.png"/>
+        <icon name="nextPlayListItemArrowHover"  src="icons/PlaylistArrow/RightRed.png"/>
+        <icon name="prevPlayListItemArrowHover"  src="icons/PlaylistArrow/LeftRed.png"/>
+        <icon name="nextShadow"                  src="icons/PlaylistArrow/RightShadow.png"/>
+        <icon name="prevShadow"                  src="icons/PlaylistArrow/LeftShadow.png"/>
+
+        <icon name="logo"                        src="icons/inlogo.png"/>
+      
+        <icon name="facebook"                    src="icons/facebook_normal.png"/>
+        <icon name="facebookHover"               src="icons/facebook_hover.png"/>
+        <icon name="twitter"                     src="icons/twitter_normal.png"/>
+        <icon name="twitterHover"                src="icons/twitter_hover.png"/>
+        <icon name="google"                      src="icons/google_normal.png"/>
+        <icon name="googleHover"                 src="icons/google_hover.png"/>
+
+        <icon name="clipMarker1"                  src="icons/ClipMarker1.png"/>
+        <icon name="clipMarker2"                  src="icons/ClipMarker2.png"/>
+        <icon name="videoMarker"                  src="icons/VideoMarker.png"/>
+ 
+        <icon name="collectionButton"                   src="icons/zee_player/collection.png"/>
+ 
+   </Icons>
+
+   <Controlbar>
+         <settings name="height"            value="50"/>
+         <settings name="width"             value="100"/>
+         <settings name="bottomPadding"     value="5"/> 
+         <settings name="color"             value="0xffffff"/>
+         <settings name="opacity"           value="1"/>
+         <settings name="type"              value="rectangle"/>
+         <settings name="iconsize"          value="70"/>
+         <settings name="leftpadding"       value="15"/>
+         <settings name="toppadding"        value="15"/>
+         <settings name="rightpadding"      value="15"/>
+         <settings name="separaterColor"    value="0xffffff"/>
+         <settings name="separaterOpacity"  value="0.1"/>  
+         <settings name="separaterWidth"    value="0"/>  
+   </Controlbar>
+
+   <TopControlbar>
+         <settings name="height"            value="63"/>
+         <settings name="width"             value="100"/>
+         <settings name="yPosition"         value="2"/> 
+         <settings name="color"             value="0xffffff"/>
+         <settings name="opacity"           value="1"/>
+         <settings name="hoverOpacity"      value="1"/>
+         <settings name="type"              value="rectangle"/>
+         <settings name="iconsize"          value="70"/>
+         <settings name="leftpadding"       value="20"/>
+         <settings name="toppadding"        value="20"/>
+         <settings name="rightpadding"      value="15"/>
+         <settings name="separaterColor"    value="0x555555"/>
+         <settings name="separaterOpacity"  value="0.1"/>  
+         <settings name="separaterWidth"    value="1"/> 
+         <settings name="iconTextFontSize"  value="10"/>
+         <settings name="iconTextColorHover" value="0xff0000"/>
+         <settings name="iconTextColor"     value="0xffffff"/> 
+   </TopControlbar>
+
+   <Scrubber>
+         <settings name="height"            value="10"/>
+         <settings name="type"              value="rectangle"/>
+         <settings name="progressColor"     value="0x269fe5"/>
+         <settings name="bufferColor"       value="0xb2b2b2"/>
+         <settings name="backGroundColor"   value="0x555554"/>
+         <settings name="leftMargin"        value="0"/>
+         <settings name="rightMargin"       value="0"/>
+   </Scrubber>
+
+   <Tooltip>
+         <settings name="color"             value="0xededed"/>
+         <settings name="textColor"         value="0x000000"/>
+   </Tooltip>
+</skin>
