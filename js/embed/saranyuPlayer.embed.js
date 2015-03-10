@@ -1,7 +1,7 @@
 (function(saranyuPlayer) {
 
 	var utils = saranyuPlayer.utils;	
-	var SRC = "http://192.168.1.118:8888/saranyuFlashPlayer/saranyuPlayer.swf";
+	var SRC = "http://localhost:8888/saranyuFlashPlayer/saranyuPlayer.swf";
 	var WMODE = "window";
 	var BGCOLOR = "#000000";
 	var embed = saranyuPlayer.embed = function(){};
@@ -63,7 +63,7 @@
 		else if(utils.isIOS()){
 			alert("IOS");
 		}
-		var html = '<video id="'+_container.id+'" name="'+_container.id+'" width="'+WIDTH+'" height="'+HEIGHT+'" poster="'+PLAYLIST["items"][0]["imageUrl"]+'" style="background-color: black;" controls>';
+		var html = '<video id="'+_container.id+'" name="'+_container.id+'" width="'+WIDTH+'" height="'+HEIGHT+'" poster="'+PLAYLIST["items"][0]["imageUrl"]+'" style="background-color: black;">';
 		html += '<source src="'+PLAYLIST["items"][0]["videoUrl"]+'">';
 		html += '</video>';
 		_container.outerHTML = html;
@@ -73,6 +73,50 @@
 		};
 
 		return _container;
+	};
+
+	embed.embedControls = function(_container) {
+		var video = document.getElementById(""+_container.id);
+		var controlBar = document.createElement("div");
+		controlBar.id = "controlBar";
+		controlBar.name = "controlBar";
+		controlBar.style.display = "inline";
+
+														// Adding Progress Bar
+		var progress = document.createElement("div");
+		progress.id = "progress";
+		progress.name = "progress";
+		progress.className = "progress progress-striped";
+		var progressBar = document.createElement("div");
+		progressBar.id = "progressBar";
+		progressBar.name = "progressBar";
+		progressBar.className = "progress-bar";
+		progress.style.width = _container.width;
+		progress.style.height = 10;
+		progress.appendChild(progressBar);
+
+														// Adding Play Icon		
+		var playBtn = document.createElement("button");
+		playBtn.id = "playBtn";
+		playBtn.name = "playBtn";
+		playBtn.className = "btn btn-default btn-lg";
+		var span = document.createElement("span");
+		span.className = "glyphicon glyphicon-play";
+		playBtn.appendChild(span);
+		playBtn.onclick = function(){
+			if(video.paused){
+				video.play();
+				span.className = "glyphicon glyphicon-pause";
+			}
+			else{
+				video.pause();
+				span.className = "glyphicon glyphicon-play";
+			}
+		}
+
+		controlBar.appendChild(progress);
+		controlBar.appendChild(playBtn);
+		return controlBar;
 	};
 
 })(window.saranyuPlayer);
